@@ -6,6 +6,8 @@ export const StyledNavBarWrapper = styled.div`
   height: 140px;
   width: 100%;
   color: white;
+  display: flex;
+  justify-content: center;
 `;
 
 export const StyledNavBarContainer = styled.div`
@@ -13,6 +15,7 @@ export const StyledNavBarContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  max-width: 1200px;
 `;
 
 export const StyledCanvasLogo = styled.img`

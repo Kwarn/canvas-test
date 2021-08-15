@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import MenuItems from "../shared/MenuItems";
 import {
   StyledBurgerIcon,
   StyledCanvasLogo,
@@ -8,6 +9,19 @@ import {
 import canvasLogo from "../../../assets/Canvas_logo.png";
 
 export default function NavBar({ openMobileMenuCb }) {
+  const [windowInnerWidth, setWindowInnerWidth] = useState(window.innerWidth);
+
+  const resizeHandler = () => {
+    setWindowInnerWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", resizeHandler);
+    return () => {
+      window.removeEventListener("resize", resizeHandler);
+    };
+  });
+
   const burgerMenuIcon = (
     <StyledBurgerIcon onClick={openMobileMenuCb}>
       <div></div>
@@ -20,7 +34,7 @@ export default function NavBar({ openMobileMenuCb }) {
     <StyledNavBarWrapper>
       <StyledNavBarContainer>
         <StyledCanvasLogo src={canvasLogo} alt="canvas logo" />
-        {burgerMenuIcon}
+        {windowInnerWidth < 670 ? burgerMenuIcon : <MenuItems />}
       </StyledNavBarContainer>
     </StyledNavBarWrapper>
   );

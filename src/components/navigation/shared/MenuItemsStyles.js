@@ -8,6 +8,11 @@ export const StyledMenuItemsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (min-width: 670px) {
+    flex-direction: row;
+    margin: auto 0 auto auto;
+  }
 `;
 
 const StyledMenuItemDefaults = css`
@@ -19,6 +24,13 @@ const StyledMenuItemDefaults = css`
     font-size: 30px;
     margin: auto;
     color: white;
+  }
+
+  @media (min-width: 670px) {
+    flex-direction: row;
+    h2 {
+      font-size: 20px;
+    }
   }
 `;
 
