@@ -1,10 +1,6 @@
-import React from 'react'
-import { StyledHeaderWrapper } from './HeaderStyles'
+import React from "react";
+import { StyledHeaderWrapper } from "./HeaderStyles";
 
 export default function Header() {
-  return (
-    <StyledHeaderWrapper>
-
-    </StyledHeaderWrapper>
-  )
+  return <StyledHeaderWrapper></StyledHeaderWrapper>;
 }

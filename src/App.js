@@ -6,8 +6,7 @@ import MobileMenu from "./components/navigation/mobile-menu/MobileMenu";
 
 const StyledAppWrapper = styled.div`
   width: 100%;
-  
-`
+`;
 
 function App() {
   return (
