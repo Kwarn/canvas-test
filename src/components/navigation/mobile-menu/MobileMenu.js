@@ -1,4 +1,5 @@
 import React from "react";
+import MenuItems from "../shared/MenuItems";
 import {
   StyledCloseIconContainer,
   StyledMobileMenuWrapper,
@@ -15,6 +16,7 @@ export default function MobileMenu({ isMobileMenuOpen, closeMobileMenuCb }) {
       <StyledCloseIconContainer>
         <MobileMenuCloseIcon onClick={closeMobileMenuCb} />
       </StyledCloseIconContainer>
+      <MenuItems />
     </StyledMobileMenuWrapper>
   );
 }
