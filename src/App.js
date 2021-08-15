@@ -1,10 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+
+const StyledAppWrapper = styled.div`
+  width: 100%;
+  
+`
 
 function App() {
   return (
-    <div className="App">
+    <StyledAppWrapper className="App">
 
-    </div>
+    </StyledAppWrapper>
   );
 }
 
