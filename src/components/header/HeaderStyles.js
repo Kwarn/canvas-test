@@ -1,4 +1,27 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+
+const leftContentOnLoadAnimation = keyframes`
+  0% {
+    margin-left: -100px;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 20px;
+    opacity: 1;
+  }
+
+`;
+
+const rightContentOnLoadAnimation = keyframes`
+  0% {
+    margin-right: -100px;
+    opacity: 0;
+  }
+  100% {
+    margin-right: 20px;
+    opacity: 1;
+  }
+`;
 
 export const StyledHeaderWrapper = styled.div`
   width: 100%;
@@ -37,11 +60,17 @@ const ContentBlock = css`
 
 export const LeftContentBlock = styled.div`
   ${ContentBlock}
+
+  opacity: 0;
+  animation-name: ${leftContentOnLoadAnimation};
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  text-align: left;
   @media (min-width: 670px) {
+    max-width: 600px;
     margin: 25vh auto auto 20px;
   }
 `;
@@ -77,6 +106,13 @@ export const TimeDateInfoContainer = styled.div`
 
 export const RightContentBlock = styled.div`
   ${ContentBlock}
+
+  opacity: 0;
+  animation-name: ${rightContentOnLoadAnimation};
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+
   img {
     display: block;
     width: 100%;

@@ -13,11 +13,12 @@ function App() {
 
   return (
     <StyledAppWrapper className="App">
+      <NavBar openMobileMenuCb={() => setIsMobileMenuOpen(true)} />
+
       <MobileMenu
         closeMobileMenuCb={() => setIsMobileMenuOpen(false)}
         isMobileMenuOpen={isMobileMenuOpen}
       />
-      <NavBar openMobileMenuCb={() => setIsMobileMenuOpen(true)} />
       <Header />
     </StyledAppWrapper>
   );

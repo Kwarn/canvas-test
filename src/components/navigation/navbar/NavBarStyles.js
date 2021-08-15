@@ -1,8 +1,21 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const onLoadAnimation = keyframes`
+  0% {
+    top: -10vh;
+  }
+  100% {
+    top: 15px;
+  }
+`;
 
 export const StyledNavBarWrapper = styled.div`
+  top: -20vh;
   position: absolute;
-  top: 15px;
+  animation-name: ${onLoadAnimation};
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
   height: 140px;
   width: 100%;
   color: white;
