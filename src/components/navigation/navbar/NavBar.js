@@ -7,9 +7,9 @@ import {
 } from "./NavBarStyles";
 import canvasLogo from "../../../assets/Canvas_logo.png";
 
-export default function NavBar() {
+export default function NavBar({ openMobileMenuCb }) {
   const burgerMenuIcon = (
-    <StyledBurgerIcon>
+    <StyledBurgerIcon onClick={openMobileMenuCb}>
       <div></div>
       <div></div>
       <div></div>

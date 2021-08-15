@@ -1,6 +1,20 @@
 import React from "react";
-import { StyledMobileMenuWrapper } from "./MobileMenuStyles";
+import {
+  StyledCloseIconContainer,
+  StyledMobileMenuWrapper,
+} from "./MobileMenuStyles";
+import mobileMenuBackground from "../../../assets/Grad_Bg.png";
+import { ReactComponent as MobileMenuCloseIcon } from "../../../assets/mobileMenuCloseIcon.svg";
 
-export default function MobileMenu() {
-  return <StyledMobileMenuWrapper></StyledMobileMenuWrapper>;
+export default function MobileMenu({ isMobileMenuOpen, closeMobileMenuCb }) {
+  return (
+    <StyledMobileMenuWrapper
+      isMenuOpen={isMobileMenuOpen}
+      background={mobileMenuBackground}
+    >
+      <StyledCloseIconContainer>
+        <MobileMenuCloseIcon onClick={closeMobileMenuCb} />
+      </StyledCloseIconContainer>
+    </StyledMobileMenuWrapper>
+  );
 }

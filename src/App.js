@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Header from "./components/header/Header";
 import NavBar from "./components/navigation/navbar/NavBar";
@@ -9,10 +9,15 @@ const StyledAppWrapper = styled.div`
 `;
 
 function App() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <StyledAppWrapper className="App">
-      <MobileMenu />
-      <NavBar />
+      <MobileMenu
+        closeMobileMenuCb={() => setIsMobileMenuOpen(false)}
+        isMobileMenuOpen={isMobileMenuOpen}
+      />
+      <NavBar openMobileMenuCb={() => setIsMobileMenuOpen(true)} />
       <Header />
     </StyledAppWrapper>
   );
