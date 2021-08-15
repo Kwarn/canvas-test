@@ -31,7 +31,7 @@ const ContentBlock = css`
   font-family: "Righteous";
   @media (min-width: 670px) {
     max-width: 50%;
-    margin: 20vh auto 0 auto;
+    margin: 25vh auto 0 auto;
   }
 `;
 
@@ -42,7 +42,7 @@ export const LeftContentBlock = styled.div`
   justify-content: left;
   text-align: left;
   @media (min-width: 670px) {
-    margin: 20vh auto auto 20px;
+    margin: 25vh auto auto 20px;
   }
 `;
 
@@ -85,7 +85,11 @@ export const RightContentBlock = styled.div`
 
     @media (min-width: 670px) {
       max-width: 400px;
-      margin: auto 20px auto auto;
+      margin-right: 0;
     }
+  }
+
+  @media (min-width: 670px) {
+    margin-right: 20px;
   }
 `;
