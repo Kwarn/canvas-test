@@ -1,7 +1,27 @@
 import React from "react";
-import { StyledNavBarWrapper } from "./NavBarStyles";
+import {
+  StyledBurgerIcon,
+  StyledCanvasLogo,
+  StyledNavBarContainer,
+  StyledNavBarWrapper,
+} from "./NavBarStyles";
 import canvasLogo from "../../../assets/Canvas_logo.png";
 
 export default function NavBar() {
-  return <StyledNavBarWrapper></StyledNavBarWrapper>;
+  const burgerMenuIcon = (
+    <StyledBurgerIcon>
+      <div></div>
+      <div></div>
+      <div></div>
+    </StyledBurgerIcon>
+  );
+
+  return (
+    <StyledNavBarWrapper>
+      <StyledNavBarContainer>
+        <StyledCanvasLogo src={canvasLogo} alt="canvas logo" />
+        {burgerMenuIcon}
+      </StyledNavBarContainer>
+    </StyledNavBarWrapper>
+  );
 }
