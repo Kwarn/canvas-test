@@ -13,6 +13,13 @@ export const StyledHeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto 20px;
+
+  @media (min-width: 670px) {
+    max-width: 1200px;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+  }
 `;
 
 const ContentBlock = css`
@@ -22,6 +29,10 @@ const ContentBlock = css`
   width: 100%;
   height: auto;
   font-family: "Righteous";
+  @media (min-width: 670px) {
+    max-width: 50%;
+    margin: 20vh auto 0 auto;
+  }
 `;
 
 export const LeftContentBlock = styled.div`
@@ -30,6 +41,9 @@ export const LeftContentBlock = styled.div`
   flex-direction: column;
   justify-content: left;
   text-align: left;
+  @media (min-width: 670px) {
+    margin: 20vh auto auto 20px;
+  }
 `;
 
 export const StyledTitle = styled.h2`
@@ -68,5 +82,10 @@ export const RightContentBlock = styled.div`
     width: 100%;
     height: auto;
     margin: auto;
+
+    @media (min-width: 670px) {
+      max-width: 400px;
+      margin: auto 20px auto auto;
+    }
   }
 `;
